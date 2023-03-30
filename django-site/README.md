@@ -1,7 +1,7 @@
 #### run => python manage.py runserver
 ### :heavy_check_mark: DONE.
-1.  Website displayes SAP, AAR and SAR when buttons are clicked
-2.
+1. linked html, bootstrap file to django
+2. Website displayes SAP, AAR and SAR when buttons are clicked
 
 ### :heavy_exclamation_mark: TBD.
 1.  Upload video and read and display time and coordinate
