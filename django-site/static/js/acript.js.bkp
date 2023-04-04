@@ -1,0 +1,87 @@
+
+
+const toggleBtnSap = document.querySelector('#toggleBtnSap');
+const divListSap = document.querySelector('#sapList');
+
+// action to be taken when clicked on hide SAP button
+toggleBtnSap.addEventListener('click', () => {
+  if (divListSap.style.display === 'none') {
+    divListSap.style.display = 'block';
+    toggleBtnSap.innerHTML = 'Hide SAP';
+  } else {
+    divListSap.style.display = 'none';
+    toggleBtnSap.innerHTML = 'SAP';
+  }
+});
+
+
+const toggleBtnSar = document.querySelector('#toggleBtnSar');
+const divListSar = document.querySelector('#sarList');
+
+// action to be taken when clicked on hide SAR button
+toggleBtnSar.addEventListener('click', () => {
+  if (divListSar.style.display === 'none') {
+    divListSar.style.display = 'block';
+    toggleBtnSar.innerHTML = 'Hide SAR';
+  } else {
+    divListSar.style.display = 'none';
+    toggleBtnSar.innerHTML = 'SAR';
+  }
+});
+
+const toggleBtnAar = document.querySelector('#toggleBtnAar');
+const divListAar = document.querySelector('#aarList');
+
+// action to be taken when clicked on hide SAR button
+toggleBtnAar.addEventListener('click', () => {
+  if (divListAar.style.display === 'none') {
+    divListAar.style.display = 'block';
+    toggleBtnAar.innerHTML = 'Hide AAR';
+  } else {
+    divListAar.style.display = 'none';
+    toggleBtnAar.innerHTML = 'AAR';
+  }
+});
+
+//const sap = [['C', 'C'], ['C', 'C']]
+const sar = [['C', 'C'], ['C', 'C'], ['C', 'C'], ['C', 'C'], ['A', 'A'], ['C', 'C']]
+const aar = [['A', 'C', 'C'], ['C', 'C', 'A'], ['C', 'A', 'A'], ['A', 'A', 'C'], ['A', 'C', 'A'], ['B', 'C', 'C'], ['C', 'C', 'A'], ['C', 'A', 'C']]
+
+// print sap
+function printSap(args){
+  let items = "";
+  for(let i = 0; i < args.length; i++){
+    items += '  ';
+    items += `${args[i]}`;
+    items += '  | ';
+  }
+
+  return items;
+}
+
+// print sar
+function printSar(args){
+  let items = "";
+  for(let i = 0; i < args.length; i++){
+    items += '  ';
+    items += `${args[i]}`;
+    items += '  | ';
+  }
+
+  return items;
+}
+
+// print aar
+function printAar(args){
+  let items = "";
+  for(let i = 0; i < args.length; i++){
+    items += '  ';
+    items += `${args[i]}`;
+    items += '  | ';
+  }
+
+  return items;
+}
+document.querySelector("#printsap").innerHTML = `SAP DATA:   ${printSap(sap)}`;
+document.querySelector("#printsar").innerHTML = `SA DATA:   ${printSar(sar)}`;
+document.querySelector("#printaar").innerHTML = `AAR DATA:   ${printAar(aar)}`;
